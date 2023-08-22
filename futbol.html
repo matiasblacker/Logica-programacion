@@ -1,0 +1,54 @@
+<meta charset="utf-8">
+
+<h1> Calculando puntos de equipo de futbol </h1>
+
+<script>
+
+	function saltarlinea(){
+        document.write("<br><br>");
+    }
+
+    function imprimir(frase){
+        document.write(frase);
+        saltarlinea();
+    }
+
+    var nombreE = prompt("ingrese nombre del equipo")
+	var Ganados = parseInt(prompt(" ingrese cantidad de partidos ganados "));
+	var Empatados = parseInt(prompt(" ingrese cantidad de partidos empatados "));
+	var Perdidos = parseInt(prompt(" ingrese cantidad de partidos perdidos "));
+
+    Ganados = Ganados * 3
+    Empatados = Empatados * 1
+    Perdidos = 0
+    puntos_pasados = 15
+    puntos_total = Ganados+Empatados+Perdidos;
+
+    imprimir("los puntos totales del equipo " + nombreE + " son: " + puntos_total);
+
+    if (puntos_total>=12) {
+
+        imprimir("El equipo ha clasificado")
+
+        if (puntos_total==puntos_pasados) {
+
+            imprimir("El Equipo tiene igual puntos que el año pasado")
+
+            if (puntos_total>puntos_pasados) {
+                imprimir("El equipo tiene más puntos que el año pasado")              
+            }          
+        }
+        if (puntos_total<puntos_pasados) {
+
+            imprimir("El Equipo tiene menos puntos que el año pasado")
+        } 
+    }
+    else{
+        imprimir("El equipo ha quedado fuera")
+        if (puntos_total<puntos_pasados) {
+
+            imprimir("El Equipo tiene menos puntos que el año pasado")
+        }
+    }
+
+</script>

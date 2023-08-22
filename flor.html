@@ -1,0 +1,44 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    pincel.fillStyle = "white";
+    pincel.fillRect(0, 0, 600, 400);
+
+
+    function getRandom(num){
+
+        return Math.round(Math.random()*num);
+    }
+
+    function colorGen(num){
+
+        let colors = ["yellow","orange","black","red","blue","dodgerblue","green"];
+
+        console.log("color seleccionado: ",num,colors[num]);
+        return colors[num];
+
+    }
+
+
+    function drawO(x, y, radio, color) {
+
+        pincel.fillStyle = color;
+        pincel.beginPath();
+        pincel.arc(x, y, radio, 0, 2*3.14);
+        pincel.fill();
+    }
+
+ drawO(300,200,50,colorGen(getRandom(6)));
+ drawO(380,200,30,colorGen(getRandom(6)));
+ drawO(220,200,30,colorGen(getRandom(6)));
+ drawO(300,200,30,colorGen(getRandom(6)));
+ drawO(300,120,30,colorGen(getRandom(6)));
+ drawO(300,280,30,colorGen(getRandom(6)));
+ 
+ 
+
+
+</script>

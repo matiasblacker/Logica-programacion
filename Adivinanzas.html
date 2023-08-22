@@ -1,0 +1,43 @@
+<meta charset="utf-8">
+
+<h1> Adivinanzas </h1>
+
+<script>
+
+	function saltarlinea(){
+        document.write("<br><br>");
+    }
+
+    function imprimir(frase){
+        document.write(frase);
+        saltarlinea();
+    }
+	
+    var intentos = 3; 
+    var contador = 1; 
+	  var numganador = Math.round(Math.random()*10);
+
+    while(contador<=intentos){
+        var numingresado = parseInt(prompt("tienes 3 intentos,ingrese un numero del 0 al 10"));
+
+        if (numingresado==numganador) {
+
+         alert("Haz acertado :D en el intento "+contador+"° ,felicidades");
+         imprimir("Gracias por jugar")
+         break;
+        }else{
+         alert("No haz acertado :( ");
+        }
+        contador++;
+    }
+    if (numingresado==numganador) {
+
+      imprimir("Haz acertado :D en el intento "+contador+"° ,felicidades");
+      imprimir("Gracias por jugar")
+    }else{
+      imprimir("No haz acertado :( el numero pensado era " + numganador);
+    }
+    imprimir("Fin");
+
+
+</script>

@@ -1,0 +1,30 @@
+<canvas width ="600" height="400"></canvas>
+
+<script>
+
+	function DrawBox(x,y,color){
+
+		var screen = document.querySelector("canvas");
+		var brush = screen.getContext("2d");
+	    brush.fillStyle = color; // propiedad
+		brush.fillRect(x,y,50,50); 
+		brush.strokestyle = "black";
+		brush.strokeRect(x,y,50,50);	
+	}
+	DrawBox(0,0,"green");
+	DrawBox(0,50,"yellow");
+	DrawBox(0,100,"red");
+   
+
+    var x = 0;
+    while(x < 600){
+
+    	DrawBox(x,0,"blue");
+		DrawBox(x,50,"white");
+		DrawBox(x,100,"red");
+
+		x = x + 50;
+    }
+
+
+</script>

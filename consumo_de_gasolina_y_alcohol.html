@@ -1,0 +1,28 @@
+<meta charset="utf-8">
+
+
+
+<script>
+    function saltarlinea(){
+        document.write("<br><br>");
+    }
+
+    function imprimir(frase){
+        document.write(frase);
+    }
+
+    var dist = 480, estanque=40; 
+    var perxkm = (dist) / estanque;
+
+    imprimir("Con Gasolina se recorrió " + dist +"km"+"<br>")
+    imprimir("El rendimiento es: " + perxkm +"km/L")                                
+    
+    saltarlinea();
+
+    dist = 300;
+    perxkm = (dist) / estanque;
+
+    imprimir("Con Alcohol se recorrió " + dist +"km"+"<br>")
+    imprimir("El rendimiento por km es: " + perxkm +"km/L")
+
+</script>

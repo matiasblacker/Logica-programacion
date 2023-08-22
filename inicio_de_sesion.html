@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+<h1> Inicio de sesion </h1>
+<script>
+
+    var intentos = 3;
+    var contador = 1;
+    var ususuccess = "alura";
+    var passuccess = "alura321"; 
+    
+    while(contador<=intentos){
+        var usu = prompt("Ingrese su usuario");
+        var pass = prompt("Ingrese su contraseña");
+
+        if( usu == ususuccess && pass == passuccess ) {
+            alert("Bienvenido al sistema " + usu);
+            contador=intentos;
+
+        } else {
+            alert("inicio de sesión inválido. Favor intente de nuevo");
+            if (contador==3) {
+                alert("Se acabaron los intentos,comuniquese con un admin");
+            }
+
+        }
+        contador++;
+    }
+
+    
+</script>

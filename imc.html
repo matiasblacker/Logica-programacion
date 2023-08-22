@@ -1,0 +1,54 @@
+<meta charset="utf-8">
+
+<h1> Calculando el IMC </h1>
+
+<script>
+
+	function saltarlinea(){
+        document.write("<br><br>");
+    }
+
+    function imprimir(frase){
+        document.write(frase);
+        saltarlinea();
+    }
+
+    function IMC(peso,altura,nombre){
+    	imc = peso/(altura*altura);
+
+        imprimir("su peso es: "+peso)
+        imprimir("su altura es: "+altura)
+    	imprimir("el imc de " + nombre + " es: " + imc)
+    	return(imc)
+    }
+	
+	nombre = prompt(" ingrese su nombre ")
+	peso = prompt(" Ingrese su peso ")
+	altura = prompt(" Ingrese su altura ")
+	imcfinal = IMC(peso,altura,nombre)
+
+    if (imcfinal<18.5) {
+
+        imprimir("Su imc indica bajo peso")
+    }
+    if (imcfinal>=18.5 && imcfinal<24.9) {
+        
+     imprimir("Su imc indica normalidad")       
+    }
+    if (imcfinal>=25 && imcfinal<=29.9) {
+        
+       imprimir("Su imc indica Sobrepeso")          
+    }
+    if (imcfinal>=30 && imcfinal<=34.9) {
+        imprimir("Su imc indica Obesidad tipo 1")
+    }
+    if(imcfinal>=35 && imcfinal<=39.9){
+        
+        imprimir("Su imc indica Obesidad tipo 2")      
+    }
+    if (imcfinal>=40) {
+        imprimir("Su imc indica Obesidad tipo 3")
+    }
+
+    
+</script>

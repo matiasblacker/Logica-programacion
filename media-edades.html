@@ -1,0 +1,47 @@
+<meta charset="utf-8">
+
+<h1> Media edades de una familia </h1>
+
+<script>
+
+	function saltarlinea(){
+        document.write("<br><br>");
+    }
+
+    function imprimir(frase){
+        document.write(frase);
+        saltarlinea();
+    }
+
+
+
+    var cantidad = parseInt(prompt("ingrese cantidad de familiares en while")); 
+    var contador = 1;
+    var tedad = 0;
+    imprimir("ciclo while");
+
+    while(contador <= cantidad){
+ 
+        edades = parseInt(prompt("ingrese edad del familiar "+contador+"°"));
+        tedad = tedad + edades;
+        proded = tedad/cantidad;
+        contador++;
+    }
+    
+    imprimir("el promedio de las edades de la familia con while es "+ proded)
+
+
+    imprimir("ciclo for");
+
+    var cantidad = parseInt(prompt("ingrese cantidad de familiares en for"));
+    var edades = 0;
+    var tedad = tedad + edades;
+    var proded = tedad/cantidad;
+    
+    for(var contador = 1; contador <= cantidad; contador++){
+
+        edades = parseInt(prompt("ingrese edad del familiar "+contador+"°"));
+    }
+    imprimir("el promedio de las edades de la familia con for es "+ proded)
+
+</script>
